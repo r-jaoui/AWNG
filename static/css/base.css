@@ -33,13 +33,67 @@ h2 {
     border-bottom: solid 3px #3d4258;
 }
 
+h3 {
+    width: 85%;
+    margin: auto;
+    font-size: 230%;
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+h5 {
+    text-align: right;
+    padding: 20px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto auto;
+}
+
+tr:hover {
+    background-color: #d0d8e7;
+}
+
+.header:hover {
+    background-color: transparent;
+}
+
+td {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border-top: solid 2px #AAAAAA;
+    border-bottom: solid 2px #AAAAAA;
+}
+
+.track-name {
+    font-size: 150%;
+    padding: 10px;
+    width: 50%;
+}
+
+.track-compo {
+    padding: 10px;
+}
+
+.track-length {
+    padding: 10px;
+}
+
+.track-price {
+    padding: 10px;
+}
+
 #content {
     padding-top: 20px;
     padding-bottom: 20px;
     width: 90%;
-    margin: auto;
-    margin-top: 40px;
+    margin: 40px auto auto;
 }
+
 #content ul {
     padding-top: 5px;
     padding-left: 5px;
@@ -82,7 +136,24 @@ h2 {
     text-align: center;
 }
 
-h5 {
-    text-align: right;
-    padding: 20px;
+#ret {
+    text-decoration:none;
+}
+
+#ret p {
+    font-size: 150%;
+    text-decoration:none;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    color: black;
+    background-color: transparent;
+    border: solid 2px #AAAAAA;
+    width: 200px;
+}
+
+#ret p:hover {
+    color: black;
+    background-color: #d0d8e7;
 }

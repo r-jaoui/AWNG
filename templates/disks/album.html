@@ -3,5 +3,23 @@
 {% block titre %}{{ album.Name }}{% endblock %}
 
 {% block contenu %}
-    <h2 id="page-title">{{ album.Title }}</h2>
+    <h3>{{ album.Title }}</h3>
+    <h4>{{ album.Artist }}</h4>
+    <table>
+        <tr class="header">
+            <th>Piste</th>
+            <th>Compositeur(s)</th>
+            <th>Durée</th>
+            <th>Prix</th>
+        </tr>
+        {% for tr in tracks %}
+            <tr>
+                <td class="track-name">{{ tr.Name }}</td>
+                <td class="track-compo">{{ tr.Composer }}</td>
+                <td class="track-length">{{ tr.Milliseconds  }} ms</td>
+                <td class="track-price">{{ tr.UnitPrice }} €</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a id="ret" href="{% url "Albums" %}"><p>Retour</p></a>
 {% endblock %}
