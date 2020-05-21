@@ -4,11 +4,19 @@
 
 {% block contenu %}
     <h2 id="page-title">Albums</h2>
+    <div id="search">
+        <form action="{% url "Albums" %}" method = "post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Rechercher" />
+        </form>
+        <a href = "{% url "Albums" %}"><button >Annuler</button></a>
+    </div>
     <ul>
-        {% for a in albums %}
+        {% for a in alb %}
             <a href="{% url "Album" a.id %}">
                 <li>
-                    <h6>{{ a.Artist }}</h6>
+                    <h6>{{ a.Artist.Name }}</h6>
                     <p>{{ a.Title }}</p>
                 </li>
             </a>
