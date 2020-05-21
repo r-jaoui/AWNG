@@ -7,7 +7,6 @@ class Album(models.Model):
     Artist = models.ForeignKey("Artist", on_delete=models.CASCADE)
 
     class Meta:
-        db_table = 'disks_album'
         verbose_name = "album"
         ordering = ['Title']
 
@@ -19,7 +18,6 @@ class Artist(models.Model):
     Name = models.CharField(max_length=120)
 
     class Meta:
-        db_table = 'disks_artist'
         verbose_name = "artist"
 
     def __str__(self):
@@ -35,7 +33,6 @@ class Track(models.Model):
     UnitPrice = models.DecimalField(max_digits=10, decimal_places=2)
 
     class Meta:
-        db_table = 'disks_track'
         verbose_name = "track"
         ordering = ['Name', 'Album', 'Milliseconds', 'UnitPrice', 'Composer', 'Bytes']
 
